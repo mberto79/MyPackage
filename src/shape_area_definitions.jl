@@ -2,9 +2,11 @@ export area
 export internal_function
 
 area(shape::Rectangle) = begin
-    @info "Calculating..."
+    info(shape)
     shape.length*shape.width
 end
+
+info(shape::Rectangle) = @info "This is a rectangle"
 
 area(shape::Hex) = begin
     @info "Calculating my super duper area..."
