@@ -1,30 +1,35 @@
 export area
 export internal_function
 
+
+info(shape::Rectangle) = @info "Calculating area of a rectangle..."
+info1(shape::Hex) = @info "Calculating area of a hex..."
+info2(shape::Square) = @info "Calculating area of a square..."
+info3(shape::Circle) = @info "Calculating area of a circle..."
+info4(shape::Triangle) = @info "Calculating area of a triangle..."
+
 area(shape::Rectangle) = begin
     info(shape)
     shape.length*shape.width
 end
 
-info(shape::Rectangle) = @info "This is a rectangle"
-
 area(shape::Hex) = begin
-    @info "Calculating my super duper area..."
+    info1(shape)
     shape.length*shape.width
 end
 
 area(shape::Square) = begin 
-    @info "Calculating..."
+    info2(shape)
     shape.side^2
 end
 
 area(shape::Circle) = begin 
-    @info "Calculating area circle..."
+    info3(shape)
     π * shape.radius^2
 end
 
 area(shape::Triangle) = begin 
-    @info "Calculating area triangle..."
+    info4(shape)
     shape.base*shape.height/2
 end
 
