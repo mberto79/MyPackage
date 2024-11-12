@@ -9,7 +9,7 @@ end
 info(shape::Rectangle) = @info "This is a rectangle"
 
 area(shape::Hex) = begin
-    info1(shape)
+    info(shape)
     shape.length*shape.width
 end
 
@@ -21,17 +21,17 @@ info(shape::Triangle) = @info "Calculating area triangle"
 
 
 area(shape::Square) = begin 
-    info2(shape)
+    info(shape)
     shape.side^2
 end
 
 area(shape::Circle) = begin 
-    info3(shape)
+    info(shape)
     π * shape.radius^2
 end
 
 area(shape::Triangle) = begin 
-    info4(shape)
+    info(shape)
     shape.base*shape.height/2
 end
 
