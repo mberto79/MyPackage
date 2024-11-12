@@ -2,3 +2,6 @@ name = "MyPackage"
 uuid = "6fd7ea8d-fd3a-42cf-bab6-5f813603f6a8"
 authors = ["Humberto <h.medina@aerofluids.org>"]
 version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
