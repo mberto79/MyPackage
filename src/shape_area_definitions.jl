@@ -9,22 +9,29 @@ end
 info(shape::Rectangle) = @info "This is a rectangle"
 
 area(shape::Hex) = begin
-    @info "Calculating my super duper area..."
+    info1(shape)
     shape.length*shape.width
 end
 
+info(shape::Hex) = @info "This is a the area of hex"
+info(shape::Square) = @info "Calculating area Square"
+info(shape::Circle) = @info "Calculating area Circle"
+info(shape::Triangle) = @info "Calculating area triangle"
+
+
+
 area(shape::Square) = begin 
-    @info "Calculating..."
+    info2(shape)
     shape.side^2
 end
 
 area(shape::Circle) = begin 
-    @info "Calculating area circle..."
+    info3(shape)
     π * shape.radius^2
 end
 
 area(shape::Triangle) = begin 
-    @info "Calculating area triangle..."
+    info4(shape)
     shape.base*shape.height/2
 end
 
